@@ -1,0 +1,46 @@
+div {text-align:center;}
+
+
+.parent {
+  /*親要素*/
+  position: relative;
+  height: 300px
+}
+
+.parent p {
+  position: absolute;
+  top: 55%;
+  left: 47%;
+  -webkit-transform : translate(-50%,-50%);
+  transform : translate(-50%,-50%);
+  width: 100px;
+  text-align: center;/*一応BOX内の文字も中央寄せ*/
+}
+
+.parent2 {
+  /*親要素*/
+  position: relative;
+  height: 150px
+}
+
+
+
+/* 「RightToLeft」の動作内容 */
+@keyframes RightToLeft {
+  0% {
+    opacity: 0;/* 透明 */
+    transform: translateX(50px);/* X軸方向に50px */
+  }
+  100% {
+    opacity: 1;/* 不透明 */
+    transform: translateX(0);
+  }
+}
+
+/* 「RightToLeft」を適用する箇所 */
+h1 {
+  animation-duration: 2s;/* アニメーション時間 */
+  animation-name: RightToLeft;/* アニメーション名 */
+}
+
+
